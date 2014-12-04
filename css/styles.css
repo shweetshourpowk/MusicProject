@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+}
+.clearFix {
+  *zoom: 1;
+}
+.clearFix:before,
+.clearFix:after {
+  clear: both;
+  line-height: 0;
+  content: "";
+  display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+#playArea {
+  background-color: black;
+  width: 500px;
+  height: 200px;
+  border-radius: 10px;
+}
