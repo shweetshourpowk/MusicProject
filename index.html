@@ -8,15 +8,6 @@
 <body>
 
 <div id="container">
-    <!-- This is where the music player will be i.e. play button, scrubber, back and forward buttons -->
-    <div id="playArea">
-
-        <span id="back">Blah</span>
-        <span id="playPause"></span>
-        <span id="forward"></span><br>
-        <span id="timeLapse"></span>
-
-    </div>
     <!-- This is the search area where you can search for songs, or artists, and maybe genres? -->
     <div id="searchArea">
         <span id="searchBox">Search: <input id="txtSearch"/></span>
@@ -24,7 +15,20 @@
 
     </div>
     <!-- This is where the search results will appear, it will be an area right under the search box. -->
-    <div id="listArea">
+    <div id="listArea" class="clearFix">
+
+    </div>
+    <!-- This is where the list of all of the songs will be, no matter the artist, genre, or album.-->
+    <div id="listAll">
+
+    </div>
+    <!-- This is where the music player will be i.e. play button, scrubber, back and forward buttons -->
+    <div id="playArea">
+
+        <span id="back"></span>
+        <span id="playPause"></span>
+        <span id="forward"></span><br>
+        <span id="timeLapse"></span>
 
     </div>
     <!-- This is the area under the playArea, it will tell the songs name, artist, genre, description, so on and so forth -->
