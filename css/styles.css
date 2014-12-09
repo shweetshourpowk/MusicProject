@@ -29,3 +29,29 @@ p {
   position: relative;
   margin: 0 auto;
 }
+#txtSearch {
+        width: 200px;
+}
+#searchArea {
+        padding-top: 20px;
+        margin-right: 50px;
+        width: 350px;
+        float: right;
+}
+#listArea {
+        width: 400px;
+        min-height: 350px;
+        margin-right: 50px;
+        margin-top: 20px;
+        float: right;
+        clear: both;
+        background-color: blue;
+}
+#listAll {
+        width: 400px;
+        min-height: 600px;
+        float: left;
+        margin-left: 50px;
+        clear: both;
+        background-color: purple;
+}
