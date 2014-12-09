@@ -21,37 +21,40 @@ p {
   margin-top: 7px;
   margin-bottom: 7px;
 }
+body,
+html {
+  height: 100%;
+}
+#container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #9b9b9b;
+  height: 100%;
+}
 #playArea {
   background-color: black;
-  width: 500px;
+  width: 1200px;
   height: 200px;
   border-radius: 10px;
-  position: relative;
   margin: 0 auto;
-}
-#txtSearch {
-        width: 200px;
+  position: relative;
+  top: 50px;
+  margin-bottom: 20px;
 }
 #searchArea {
-        padding-top: 20px;
-        margin-right: 50px;
-        width: 350px;
-        float: right;
+  width: 300px;
+  float: right;
+  margin: 10px 10px;
 }
 #listArea {
-        width: 400px;
-        min-height: 350px;
-        margin-right: 50px;
-        margin-top: 20px;
-        float: right;
-        clear: both;
-        background-color: blue;
+  width: 60%;
+  min-height: 75%;
+  margin-top: 20px;
+  float: right;
+  background-color: blue;
 }
 #listAll {
-        width: 400px;
-        min-height: 600px;
-        float: left;
-        margin-left: 50px;
-        clear: both;
-        background-color: purple;
+  width: 400px;
+  min-height: 75%;
+  background-color: purple;
 }
