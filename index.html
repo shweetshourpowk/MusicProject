@@ -3,6 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Music Playa</title>
+    <link rel="stylesheet" href="lib/font-awesome-4.2.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
@@ -17,12 +18,18 @@
     <!-- This is where the music player will be i.e. play button, scrubber, back and forward buttons -->
     <div id="playArea">
 
-        <span id="back"></span>
-        <span id="playPause"></span>
-        <span id="forward"></span><br>
+        <span id="back"><i class="fa fa-fast-backward fa-4x fa-inverse"></i></span>
+        <span id="playPause"><i class="fa fa-play fa-5x fa-inverse"></i></span>
+        <span id="forward"><i class="fa fa-fast-forward fa-4x fa-inverse"></i></span><br>
         <span id="timeLapse"></span>
 
     </div>
+
+    <!-- This is the area under the playArea, it will tell the songs name, artist, genre, description, so on and so forth -->
+    <div id="descArea">
+
+    </div>
+
     <!-- This is where the search results will appear, it will be an area right under the search box. -->
     <div id="listArea" class="clearFix">
 
@@ -32,10 +39,6 @@
 
     </div>
 
-    <!-- This is the area under the playArea, it will tell the songs name, artist, genre, description, so on and so forth -->
-    <div id="descArea">
-
-    </div>
 
 </div>
 
