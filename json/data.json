@@ -17,7 +17,7 @@
             "Desc": "So much has been said and written about the Beatles -- and their story is so mythic in its sweep -- that it's difficult to summarize their career without restating clichés that have already been digested by tens of millions of rock fans. To start with the obvious, they were the greatest and most influential act of the rock era, and introduced more innovations into popular music than any other rock band of the 20th century. Moreover, they were among the few artists of any discipline that were simultaneously the best at what they did and the most popular at what they did. Relentlessly imaginative and experimental, the Beatles grabbed hold of the international mass consciousness in 1964 and never let go for the next six years, always staying ahead of the pack in terms of creativity but never losing their ability to communicate their increasingly sophisticated ideas to a mass audience. Their supremacy as rock icons remains unchallenged to this day, decades after their breakup in 1970.",
             "Genre": "Classic Rock",
             "Pic": "<img src='img/Yellow_submarine_songtrack.png' />",
-            "Song": "< >"
+            "Song": "mp3/beatles/Yellow Submarine.mp3"
         },
         {
             "Title": "Hey Bulldog",
@@ -125,7 +125,8 @@
             "Date": "24 October 2011",
             "Desc": "The album is Bublé's second Christmas-themed release, after he released a five-track extended play, titled Let It Snow. Some of the songs from Let It Snow have been re-recorded for inclusion on Christmas, making Christmas his first full-length holiday release. For the album, Bublé teamed up with several well-known artists to record duets. His duet version of White Christmas with country music singer Shania Twain was based on an early arrangement by The Drifters, while his recording of Jingle Bells with The Puppini Sisters was based on the 1943 recording of Bing Crosby and The Andrews Sisters. He also teamed up with Latin star Thalía for a recording of Feliz Navidad.",
             "Genre": "Christmas",
-            "Pic": "<img src='img/buble.png' />"
+            "Pic": "<img src='img/buble.png' />",
+            "Song": "mp3/buble/Its Beginning to Look a lot Like Christmas.mp3"
         },
         {
             "Title": "Santa Claus Is Coming to Town",
