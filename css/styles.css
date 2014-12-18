@@ -66,14 +66,14 @@ html {
 }
 #playArea #back {
   float: left;
-  margin-top: 80px;
+  margin-top: 20px;
   margin-right: 50px;
   margin-left: 36%;
 }
 #playArea #playPause {
   height: 50px;
   float: left;
-  margin-top: 70px;
+  margin-top: 20px;
   margin-right: 50px;
 }
 #playArea .playOn {
@@ -92,7 +92,7 @@ html {
 }
 #playArea #forward {
   float: left;
-  margin-top: 80px;
+  margin-top: 20px;
 }
 #searchArea {
   width: 300px;
@@ -115,4 +115,9 @@ html {
 }
 #listAll li {
   cursor: pointer;
+}
+#audio {
+  float: left;
+  margin-left: 37%;
+  margin-top: 25px;
 }

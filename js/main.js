@@ -74,17 +74,16 @@ $(document).ready(function(){
         });
 
 
-
         $("#button").click(function(){
             var searchTerm = $("#txtSearch").val();
             var results = {};
 
             //will only search titles
             //will only return exact match names
-            results.music = _.filter(music, function (item) {
+            results.music = _.filter(songs.Title, function (item) {
                 return (item.Title.toUpperCase().indexOf(searchTerm.toUpperCase()) != -1);
             });
-            resultsArea.html("<ul><li><h2>" + results.Title + "</h2></li>" + "<ul><li><h3>" + results.Artist + "</h3></li></ul></ul>");
+            $("#resultsArea").html("<ul><li><h2>" + results.Title + "</h2></li>" + "<ul><li><h3>" + results.Artist + "</h3></li></ul></ul>");
         })
 
 
