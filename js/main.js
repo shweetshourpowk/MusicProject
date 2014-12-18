@@ -1,6 +1,7 @@
 
 var songs;
 var show;
+var genres;
 var playPause = $("#playPause");
 var play = $("#play");
 var pause = $("#pause");
@@ -14,6 +15,7 @@ $(document).ready(function(){
         console.log(data);
 
         songs = data.music;
+        genres = data.genres;
 
         for (var i = 0; i < data.music.length; i++) {
             $("#listAll").append("<ul> <li data-index='"+ i +"'><h2>" + data.music[i].Title + "</h2></li>" + "<ul><li data-index='" + i +"'><h3>" + data.music[i].Artist + "</h3></li></ul>" + "<ul id='descHide'><li data-index='" + i +"'>" + data.music[i].Album + "</li>" + "<li data-index='" + i +"'>" + data.music[i].Date + "</li>" + "<li data-index='" + i +"'>" + data.music[i].Desc + "</li>" + "<li data-index='" + i +"'>" + data.music[i].Genre + "</li>" + "<li data-index='" + i +"'>" + data.music[i].Pic + "</li></ul>" + "</ul>" );
@@ -25,9 +27,9 @@ $(document).ready(function(){
 
             var index = clickedItem.data("index");
             var song = songs[index];
-            //console.log(song);
+            console.log(song);
 
-            $("#descArea").html("<div id='desc'>" + song.Pic + "<h2>" + song.Title + "</h2>" + "<p>" + song.Artist + " " + song.Album + " " + song.Date + " " + song.Genre + "</p>" + "<p>"+ song.Desc + "</p>" + "</div>");
+            $("#descArea").html("<div id='desc'>" + song.Pic + "<h2>" + song.Title + "</h2>" + "<p>" + song.Artist + " " + song.Album + " " + song.Date + " " + genres[1] + "</p>" + "<p>"+ song.Desc + "</p>" + "</div>");
 
 
             var myAudio = document.querySelector("#audio");
@@ -70,6 +72,20 @@ $(document).ready(function(){
 
 
         });
+
+
+        $("#button").click(function(){
+            var searchTerm = $("#txtSearch").val();
+            var results = {};
+
+            //will only search titles
+            //will only return exact match names
+            results.music = _.filter(songs, function (item) {
+                return (item.Title.toUpperCase().indexOf(searchTerm.toUpperCase()) != -1);
+            });
+            resultsArea.html("<ul><li><h2>" + results.Title + "</h2></li>" + "<ul><li><h3>" + results.Artist + "</h3></li></ul></ul>");
+        })
+
 
 
     })
