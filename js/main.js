@@ -6,6 +6,7 @@ var play = $("#play");
 var pause = $("#pause");
 var back = $("#back");
 var forw = $("#forward");
+var res = $("#resultsArea");
 
 $(document).ready(function(){
 
@@ -28,7 +29,6 @@ $(document).ready(function(){
 
             $("#descArea").html("<div id='desc'>" + song.Pic + "<h2>" + song.Title + "</h2>" + "<p>" + song.Artist + " " + song.Album + " " + song.Date + " " + song.Genre + "</p>" + "<p>"+ song.Desc + "</p>" + "</div>");
 
-            //$("#audio").html("<source src='" + song.Song + "' type='audio/wav'>");
 
             var myAudio = document.querySelector("#audio");
             myAudio.src = song.Song;
@@ -36,10 +36,6 @@ $(document).ready(function(){
                 myAudio.play();
             });
             myAudio.load();
-
-            //play.click(function(){
-            //  playPause(event);
-            //});
 
             playPause.click(function() {
                  if (myAudio.paused == false) {
@@ -74,7 +70,6 @@ $(document).ready(function(){
 
 
         });
-
 
 
     })
