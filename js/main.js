@@ -1,7 +1,9 @@
 
 var songs;
 var show;
-var play = $("#playPause");
+var playPause = $("#playPause");
+var play = $("#play");
+var pause = $("#pause");
 
 $(document).ready(function(){
 
@@ -37,13 +39,20 @@ $(document).ready(function(){
             //  playPause(event);
             //});
 
-            play.click(function() {
+            playPause.click(function() {
                  if (myAudio.paused == false) {
-                    myAudio.pause();
+                     myAudio.pause();
+                     if ((play).hasClass('playOn')) {
+                         (pause).removeClass('pauseOff').addClass('pauseOn');
+                         //(play).removeClass('playOn').addClass('playOff');
+                     }
 
                  } else {
                      myAudio.play();
-
+                     if ((pause).hasClass('pauseOn')) {
+                         (play).removeClass('playOff').addClass('playOn');
+                         (pause).removeClass('pauseOn').addClass('pauseOff');
+                     }
                  }
             });
 
