@@ -11,7 +11,7 @@ var res = $("#resultsArea");
 
 $(document).ready(function(){
 
-    $.getJSON( "json/data.json", function(data){
+    $.getJSON( "json/music.json", function(data){
         console.log(data);
 
         songs = data.music;
@@ -74,13 +74,14 @@ $(document).ready(function(){
         });
 
 
+
         $("#button").click(function(){
             var searchTerm = $("#txtSearch").val();
             var results = {};
 
             //will only search titles
             //will only return exact match names
-            results.music = _.filter(songs, function (item) {
+            results.music = _.filter(music, function (item) {
                 return (item.Title.toUpperCase().indexOf(searchTerm.toUpperCase()) != -1);
             });
             resultsArea.html("<ul><li><h2>" + results.Title + "</h2></li>" + "<ul><li><h3>" + results.Artist + "</h3></li></ul></ul>");
