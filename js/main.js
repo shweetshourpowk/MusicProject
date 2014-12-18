@@ -4,6 +4,8 @@ var show;
 var playPause = $("#playPause");
 var play = $("#play");
 var pause = $("#pause");
+var back = $("#back");
+var forw = $("#forward");
 
 $(document).ready(function(){
 
@@ -42,18 +44,32 @@ $(document).ready(function(){
             playPause.click(function() {
                  if (myAudio.paused == false) {
                      myAudio.pause();
-                     if ((play).hasClass('playOn')) {
-                         (pause).removeClass('pauseOff').addClass('pauseOn');
-                         //(play).removeClass('playOn').addClass('playOff');
+                     if ((pause).hasClass('pauseOn')) {
+                         (pause).removeClass('pauseOn').addClass('pauseOff');
+                         (play).removeClass('playOff').addClass('playOn');
                      }
 
                  } else {
                      myAudio.play();
-                     if ((pause).hasClass('pauseOn')) {
-                         (play).removeClass('playOff').addClass('playOn');
-                         (pause).removeClass('pauseOn').addClass('pauseOff');
+                     if ((play).hasClass('playOn')) {
+                         (play).removeClass('playOn').addClass('playOff');
+                         (pause).removeClass('pauseOff').addClass('pauseOn');
                      }
                  }
+            });
+
+            back.click(function(){
+                index--;
+                song = songs[index];
+                myAudio.src = song.Song;
+                $("#descArea").html("<div id='desc'>" + song.Pic + "<h2>" + song.Title + "</h2>" + "<p>" + song.Artist + " " + song.Album + " " + song.Date + " " + song.Genre + "</p>" + "<p>"+ song.Desc + "</p>" + "</div>");
+            });
+
+            forw.click(function(){
+                index++;
+                song = songs[index];
+                myAudio.src = song.Song;
+                $("#descArea").html("<div id='desc'>" + song.Pic + "<h2>" + song.Title + "</h2>" + "<p>" + song.Artist + " " + song.Album + " " + song.Date + " " + song.Genre + "</p>" + "<p>"+ song.Desc + "</p>" + "</div>");
             });
 
 
