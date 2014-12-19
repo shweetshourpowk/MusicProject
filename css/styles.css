@@ -19,7 +19,7 @@ h5,
 h6,
 p {
   margin-top: 7px;
-  margin-bottom: 7px;
+  margin-bottom: 4px;
 }
 body,
 html {
@@ -28,7 +28,7 @@ html {
 #container {
   width: 1200px;
   margin: 0 auto;
-  background-color: #9b9b9b;
+  background-color: #cdb339;
   height: 1175px;
   padding: 0 25px;
 }
@@ -95,23 +95,31 @@ html {
   margin-top: 20px;
 }
 #searchArea {
-  width: 300px;
+  width: 700px;
   float: right;
   margin: 10px 10px;
 }
+#searchArea #title {
+  float: left;
+}
 #resultsArea {
-  width: 65%;
-  min-height: 60%;
+  width: 60%;
+  min-height: 59%;
   margin-top: 30px;
   float: right;
-  background-color: blue;
+  background-color: #cdb339;
+  border: double 5px black;
+  border-radius: 5px;
+  overflow: scroll;
 }
 #listAll {
-  width: 400px;
-  max-height: 60%;
-  background-color: purple;
+  width: 35%;
+  max-height: 59%;
+  background-color: #ffc4ac;
   overflow: scroll;
   margin-top: 30px;
+  border: double 5px black;
+  border-radius: 5px;
 }
 #listAll li {
   cursor: pointer;
@@ -119,5 +127,5 @@ html {
 #audio {
   float: left;
   margin-left: 37%;
-  margin-top: 25px;
+  margin-top: 0;
 }
