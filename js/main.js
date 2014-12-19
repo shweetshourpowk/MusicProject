@@ -29,7 +29,7 @@ $(document).ready(function(){
             var song = songs[index];
             console.log(song);
 
-            $("#descArea").html("<div id='desc'>" + song.Pic + "<h2>" + song.Title + "</h2>" + "<p>" + song.Artist + " " + song.Album + " " + song.Date + " " + genres[1] + "</p>" + "<p>"+ song.Desc + "</p>" + "</div>");
+            $("#descArea").html("<div id='desc'>" + song.Pic + "<h2>" + song.Title + "</h2>" + "<p>" + song.Artist + " " + song.Album + " " + song.Date + " " + song.Genre + "</p>" + "<p>"+ song.Desc + "</p>" + "</div>");
 
 
             var myAudio = document.querySelector("#audio");
@@ -74,16 +74,28 @@ $(document).ready(function(){
         });
 
 
+        $.when(
+            $.ajax("components/components.html") , //load in our component data
+            $.getJSON("json/music.json") //load in our data data
+        ).done(function( templateData, data) {
+
+                var templates = $(templateData[0]);
+
+                searchTemplate = Handlebars.compile( templates.find("#searchLinks").html() );
+
+                search = data[0].music;
+            });
+
         $("#button").click(function(){
             var searchTerm = $("#txtSearch").val();
             var results = {};
 
             //will only search titles
             //will only return exact match names
-            results.music = _.filter(songs.Title, function (item) {
+            results.music = _.filter(search, function (item) {
                 return (item.Title.toUpperCase().indexOf(searchTerm.toUpperCase()) != -1);
             });
-            $("#resultsArea").html("<ul><li><h2>" + results.Title + "</h2></li>" + "<ul><li><h3>" + results.Artist + "</h3></li></ul></ul>");
+            res.html(searchTemplate(results));
         })
 
 
