@@ -3,15 +3,15 @@
 session_start();
 
 //check for a $_SESSION user_id variable and set it to 0 if it does not exist
-if(!isset($_SESSION["user"])){
-    $_SESSION["user"] = 0;
+if(!isset($_SESSION["user_id"])){
+    $_SESSION["user_id"] = 0;
 }
 
 //Note the "include" URL  -- this PHP file runs from the php directory
 include("connect.php");
 
 //if the user is submitting the credentials...
-if($_SESSION["user"] < 1){
+if($_SESSION["user_id"] < 1){
     if((isset($_REQUEST["username"]))&&(isset($_REQUEST["password"]))){
 
         // To protect MySQL injection
@@ -26,7 +26,7 @@ if($_SESSION["user"] < 1){
         $mypassword = mysqli_real_escape_string($link, $mypassword);
         //$mypassword = SHA1($mypassword);//password encryption --for simple login, we will not encrypt the PW
 
-        $query = "SELECT * FROM n413_users WHERE username='".$myusername."' and password='".$mypassword."'";
+        $query = "SELECT * FROM music_users WHERE user='".$myusername."' and pass='".$mypassword."'";
         $result = mysqli_query($link, $query);
 
         // Mysql_num_rows contains the number of rows selected
@@ -71,7 +71,7 @@ if($_SESSION["user"] < 1){
 
         $html .= '
 		<h4>Log-In</h4>
-		<form id="login" name="login" method="post" action="php/simple_login/n413_simple_login.php">
+		<form id="login" name="login" method="post" action="php/login.php">
 			<div id="login_panel">
 				<label class="login_labels">Username:</label>
 				<input class = "login_input" id="username" name="username" type="text" placeholder="Username" autofocus required maxsize="45"><br/>
@@ -85,7 +85,7 @@ if($_SESSION["user"] < 1){
 			// Attach a submit handler to the form
 			$( "#login" ).submit(function( event ) {
 			  event.preventDefault();
-			  $.post("php/n413_simple_login.php",$("#login").serialize(),function(data){
+			  $.post("php/login.php",$("#login").serialize(),function(data){
 				$("#login_window").html(data);
 				},"text");
 			});
