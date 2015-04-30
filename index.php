@@ -36,6 +36,7 @@ $html .= '
 	<head lang="en">
     <meta charset="UTF-8">
     <title>Music Playa</title>
+    <link rel="stylesheet" href="css/n413site_main.css">
     <link rel="stylesheet" href="lib/font-awesome-4.2.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
 

@@ -85,7 +85,7 @@ if($_SESSION["user_id"] < 1){
 			// Attach a submit handler to the form
 			$( "#login" ).submit(function( event ) {
 			  event.preventDefault();
-			  $.post("php/login.php",$("#login").serialize(),function(data){
+			  $.post("php/n413_simple_login.php",$("#login").serialize(),function(data){
 				$("#login_window").html(data);
 				},"text");
 			});
